@@ -1,0 +1,19 @@
+.navMenu {
+	font-size: 16px;
+	color: white;
+	margin-right: 10px;
+	padding-bottom: 3px;
+}
+.menuItem {
+	display: inline-block;
+	margin-right: 8px;
+}
+.menuItem .auth {
+	display: inline-block;
+	margin-top: 10px;
+}
+.headerNav {
+	text-align: right;
+	padding: 10px;
+	background-color: #0061a5;
+}

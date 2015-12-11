@@ -1,0 +1,129 @@
+<html lang="es">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta content="IE=11.0000" http-equiv="X-UA-Compatible">
+    <title>COPASeguridad.com - Login</title>
+    <!-- <meta charset="utf-8"> -->
+    <meta name="format-detection" content="telephone=no">
+    <link href="../images/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/touchTouch.css">  
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js"></script> 
+    <script src="../js/login.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> 
+		<!--[if IE 11]>
+	<style>   font: 300 0px/0px 'Lato', sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+    zoom: 1;
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;</style>
+<![endif]-->
+    <!--[if lt IE 8]>
+ <div id="ie6-alert" style="width: 100%; text-align:center;">    <img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" />        <area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>  </div>
+  <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>    <link rel="stylesheet" type="text/css" media="screen" href="../css/ie.css">
+  <![endif]-->
+    <meta name="GENERATOR" content="MSHTML 11.00.9600.17924">
+    <link rel="stylesheet" href="http://css-spinners.com/css/spinner/whirly.css" type="text/css">
+  </head>
+  <body class="home"><!--========================================================
+                            HEADER   =========================================================-->
+    <header id="header">
+      <section class="header_top">
+        <div id="stuck_container" style="height2: 95px;">
+          <div class="search-block" id="search-block" style="display:none;">
+            <div class="search-block_icon fa fa-search" id="icon"></div>
+            <form id="search" style="display: none;" action="search_panama.php" method="GET" accept-charset="utf-8">
+              <input type="text" name="s" placeholder="Enter keyword:"/>
+              <a onclick="document.getElementById('search').submit()"><div class="search_icon"></div>
+              </a>
+            </form>
+          </div>
+          <div class="headerNav">
+            <nav>
+              <ul class="navMenu">
+                <li class="menuItem"><a href="*"><img src="../images/panama-flag.jpg" border="0" width="50"height="36"></a></li>
+                <li class="menuItem"><a href="../en/login.html"><img src="../images/usflag.png" border="0" width="50" height="36"></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </header>
+    <article class="content">
+      <div class="container" id="facts">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading wow fadeInUp"><a href="index.html">Copa Airlines</a></h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown"
+                style="font-size: 20px;">Bienvenido al portal de Seguridad Operacional!</p>
+            </div>
+            <div class="block-item-2">
+              <ul class="login-box">
+                <li class="block-item-2_description text-3 text__light wow fadeInDown">
+                  <a href="#">Haga click aqu&iacute; para reportar un evento o un peligro relacionado con la Seguridad Operacional.</a>
+                </li>
+                <li class="block-item-2_description text-3 text__light wow fadeInDown auth">
+                  <div>Acceda al portal de Seguridad Operacional:</div>
+                  <div class="input-box">
+                    <div class="validate user"></div>
+                    <div class="label">Usuario: </div>
+                    <input id="user"/>
+					<div class="note-text">(Nota: Introduzca email copaair.com)</div>
+                  </div>
+                  <div class="input-box">
+                    <div class="label">Contrase&ntilde;a: </div>
+                    <input id="token" type="password"/>
+                  </div>
+                  <div class="input-box">
+                    <div id="login" class="input-button">submit</div>
+                  </div>
+                  <div class="input-box">
+                    <div class="login-message"><a href="register.html">* Haga click aqu&iacute; para crear un usuario</a> o <a href="reset.html">si olvid&oacute; su contrase&ntilde;a</a></div>
+                  </div>
+                </li>
+                <li class="block-item-2_description text-3 text__light wow fadeInDown spin">
+                  <div class="whirly-loader">
+                    Loading…
+                  </div>
+                </li>
+                <li class="block-item-2_description text-3 text__light wow fadeInDown success">
+                  <div>Successfully logged in!</div>
+                </li>
+                <li class="block-item-2_description text-3 text__light wow fadeInDown">
+                  <span>Preguntas? Env&iacute;e un email a <a href="mailto:seguridad@copaair.com">seguridad@copaair.com</a></span>
+                </li>
+                <!--<li class="block-item-2_description text-3 text__light wow fadeInDown">
+                  <span><a href="">Acceso para el Equipo de Safety.</a></span>
+                </li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!--========================================================
+                            FOOTER   =========================================================-->
+    <footer id="footer">
+      <div class="footer_copyright text-3" style="font-size: 10px;">©2015 MA
+        Software Systems. All Rights Reserved.</div>
+    </footer>
+  <script src="../js/script.js"></script>
+  </body>
+</html>

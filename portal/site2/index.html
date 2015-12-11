@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name = "format-detection" content = "telephone=no" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/camera.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/touchTouch.css">  
+  <link rel="stylesheet" href="css/animation.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.2.1.js"></script>
+
+  <script src="js/camera.min.js"></script>
+  <script>
+    jQuery(function(){      
+      jQuery('.camera_wrap').camera({
+        loader: false,
+        minHeight: '500',
+        height: '41.98%',
+        thumbnails: false,
+        caption: false,
+        pagination: true,
+        navigation: false,
+        playPause: false,
+        fx: 'topLeftBottomRight'
+      });
+    });
+  </script>
+
+  <script src="search/search.js"></script>
+  <script>
+    $(document).ready(function () {
+      var state = 0;
+      document.getElementById('icon').onclick = function() {
+        if (state == 1) {
+          document.getElementById('search').style.display = 'none';
+          state = 0;
+          return;
+        }
+        document.getElementById('search').style.display = 'block';
+        state = 1;
+      };
+    });
+  </script>
+
+  <script src="js/touchTouch.jquery.js"></script> 
+  <script>
+   $(document).ready(function(){
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    $('.gallery .block-gall_item').touchTouch();
+  }); 
+  </script>
+
+  <script src="js/TMForm.js"></script>
+  <script src="js/modal.js"></script>
+
+  <script src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> 
+
+  <!--[if lt IE 8]>
+  <div id="ie6-alert" style="width: 100%; text-align:center;">
+    <img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" />
+        <area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>
+  </div>
+  <![endif]-->
+  
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+  <![endif]-->
+</head>
+
+<body class="home">
+  <div class="content-load-spinner"></div>
+
+  <!--========================================================
+                            HEADER 
+  =========================================================-->
+  <header id="header">
+
+    <section class="header_top">
+      <div id="stuck_container">
+
+		<img src="/images/copa_logo.png" height="95" />
+
+        <div class="search-block" id="search-block">
+          <div class="search-block_icon fa fa-search" id="icon"></div>
+          <form id="search" style="display: none;" action="search.php" method="GET" accept-charset="utf-8">
+            <input type="text" name="s" placeholder="Enter keyword:"/>
+            <a onclick="document.getElementById('search').submit()"><div class="search_icon"></div>
+            </a>
+          </form>
+        </div>
+    
+        <div class="navigation">
+          <nav>
+            <ul class="menu">
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#staff">Staff</a></li>
+              <li><a href="#clients">Clients</a></li>
+              <li><a href="#contact-us">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="camera_wrap">
+      <div data-src="images/slide.jpg">
+        <div class="slider">
+          <article class="slider_item fadeIn camera_effected">
+
+            <div class="container">
+              <div class="row">
+                <div class="grid_12">
+
+                  <div class="block-item-1">
+                    <h2 class="block-item-1_heading">
+                      <span class="text-1">SMS</span><br>
+                      <span class="text__regular">Consulting Services</span>
+                    </h2>
+                    <p class="block-item-1_description text-2">
+                      We are the trusted advisor to the world's leading businesses
+                    </p>
+                    <div class="block-item-1_extension">
+                      <a class="btn" href="#">Learn more</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+      <div data-src="images/slide1.jpg"> 
+        <div class="slider">
+          <article class="slider_item fadeIn camera_effected">
+
+            <div class="container">
+              <div class="row">
+                <div class="grid_12">
+
+                  <div class="block-item-1">
+                    <h2 class="block-item-1_heading">
+                      <span class="text-1">SMS</span><br>
+                      <span class="text__regular">Consulting Services</span>
+                    </h2>
+                    <p class="block-item-1_description text-2">
+                      We are the trusted advisor to the world's leading businesses
+                    </p>
+                    <div class="block-item-1_extension">
+                      <a class="btn" href="#">Learn more</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+      <div data-src="images/slide2.jpg"> 
+        <div class="slider">
+          <article class="slider_item fadeIn camera_effected">
+
+            <div class="container">
+              <div class="row">
+                <div class="grid_12">
+
+                  <div class="block-item-1">
+                    <h2 class="block-item-1_heading">
+                      <span class="text-1">SMS</span><br>
+                      <span class="text__regular">Consulting Services</span>
+                    </h2>
+                    <p class="block-item-1_description text-2">
+                      We are the trusted advisor to the world's leading businesses
+                    </p>
+                    <div class="block-item-1_extension">
+                      <a class="btn" href="#">Learn more</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="clearfix"></div>
+  </header>
+
+  <!--========================================================
+                            CONTENT 
+  =========================================================-->
+  <section id="content">
+    <article class="content_bg__1 content_inset__1">
+      <div id="about" class="hashAncor"></div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading wow fadeInDown">
+                The company
+              </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInUp">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.
+              </p>
+            </div>
+          </div>
+          <div class="grid_6">
+            <div class="block-item-3 wow fadeInLeft">
+              <img class="block-item-3_img" src="images/page1_img2.jpg" alt="">
+              <div class="block-item-3_content">
+                <h3 class="block-item-3_heading">
+                  <a href="#">Amet consectetuer adipiscing</a>
+                </h3>
+                <p class="block-item-3_description">
+                  Lorem ipsum dolor sit amet, r adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_6">
+            <div class="block-item-3 wow fadeInRight">
+              <img class="block-item-3_img" src="images/page1_img3.jpg" alt="">
+              <div class="block-item-3_content">
+                <h3 class="block-item-3_heading">
+                  <a href="#">Praesent vestibulum</a>
+                </h3>
+                <p class="block-item-3_description">
+                  Lorem ipsum dolor sit amet, r adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="grid_6">
+            <div class="block-item-3 wow fadeInLeft">
+              <img class="block-item-3_img" src="images/page1_img4.jpg" alt="">
+              <div class="block-item-3_content">
+                <h3 class="block-item-3_heading">
+                  <a href="#">Molestie lacus nean nonummy</a>
+                </h3>
+                <p class="block-item-3_description">
+                  Lorem ipsum dolor sit amet, r adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_6">
+            <div class="block-item-3 wow fadeInRight">
+              <img class="block-item-3_img" src="images/page1_img5.jpg" alt="">
+              <div class="block-item-3_content">
+                <h3 class="block-item-3_heading">
+                  <a href="#">Fusce suscipit varius mi</a>
+                </h3>
+                <p class="block-item-3_description">
+                  Lorem ipsum dolor sit amet, r adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="block-stellar content_bg__2" data-stellar-background-ratio="-0.005">
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading wow fadeInUp">
+                Some facts
+              </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown">
+                Fusce suscipit varius mi. Cum sociis natoque penatibus et mnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharet. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown">
+              <img class="block-item-4_img" src="images/page1_img7.png" alt="">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description">
+                  <span class="text-4">182</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Consectetur</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown">
+              <img class="block-item-4_img" src="images/page1_img8.png" alt="">
+              <div class="block-item-4_content">                
+                <p class="block-item-4_description">
+                  <span class="text-4">205</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Dipiscing elit</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown">
+              <img class="block-item-4_img" src="images/page1_img9.png" alt="">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description">
+                  <span class="text-4">34</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Praesent</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown">
+              <img class="block-item-4_img" src="images/page1_img10.png" alt="">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description">
+                  <span class="text-4">92</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Molestie lacus</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="content_inset__2">
+      <div id="projects" class="hashAncor"></div>
+
+      <section id="options" class="content_bg__3">
+        <div class="container">
+          <div class="row">
+            <div class="grid_12">
+              <div class="block-item-5">
+                <h2 class="block-item-5_heading">
+                  Our projects
+                </h2>
+                <ul id="filters" class="option-set nav block-item-5_description text-3 text__upercase" data-option-key="filter">
+                  <li><a href="#filter" data-option-value="*" class="selected">Fusce suscipit</a></li>
+                  <li><a href="#filter" data-option-value=".first">Varius mi</a></li>
+                  <li><a href="#filter" data-option-value=".second">Cum sociis</a></li>
+                  <li><a href="#filter" data-option-value=".third">Natoque</a></li> 
+                  <li><a href="#filter" data-option-value=".fourth">Penatibus</a></li>   
+                  <li><a href="#filter" data-option-value=".fifth">Mis</a></li>          
+                </ul>
+              </div>
+            </div>    
+          </div>
+        </div>
+      </section>
+      <div class="el gallery block-gall" id="container">
+        <div class="element third">            
+           <a href="images/gallery/Depositphotos_27719727_original.jpg" class="block-gall_item">
+             <img src="images/page1_img11.jpg" alt="">
+           </a>
+        </div>
+        <div class="element second">
+           <a href="images/gallery/Depositphotos_24587177_original.jpg" class="block-gall_item">
+             <img src="images/page1_img12.jpg" alt="">
+           </a>
+        </div>
+        <div class="element first fourth fifth">
+           <a href="images/gallery/Depositphotos_40853577_original.jpg" class="block-gall_item">
+             <img src="images/page1_img13.jpg" alt="">
+           </a>
+        </div>
+        <div class="element first">
+           <a href="images/gallery/Depositphotos_29445249_original.jpg" class="block-gall_item">
+             <img src="images/page1_img14.jpg" alt="">
+           </a>
+        </div>
+        <div class="element first">
+           <a href="images/gallery/Depositphotos_26997015_original.jpg" class="block-gall_item">
+             <img src="images/page1_img15.jpg" alt="">
+           </a>
+        </div>
+        <div class="element second fourth">
+           <a href="images/gallery/Depositphotos_7712645_original.jpg" class="block-gall_item">
+             <img src="images/page1_img16.jpg" alt="">
+           </a>
+        </div>
+        <div class="element third fourth">
+           <a href="images/gallery/Depositphotos_3300741_original.jpg" class="block-gall_item">
+             <img src="images/page1_img17.jpg" alt="">
+           </a>
+        </div>
+        <div class="element first fifth">
+           <a href="images/gallery/Depositphotos_32597903_original.jpg" class="block-gall_item">
+             <img src="images/page1_img18.jpg" alt="">
+           </a>
+        </div>
+        <div class="element second fifth">
+           <a href="images/gallery/Depositphotos_13876252_original.jpg" class="block-gall_item">
+             <img src="images/page1_img19.jpg" alt="">
+           </a>
+        </div>
+        <div class="element first fourth">
+           <a href="images/gallery/Depositphotos_18975259_original.jpg" class="block-gall_item">
+             <img src="images/page1_img20.jpg" alt="">
+           </a>
+        </div>
+      </div>
+    <div>&nbsp;</div>
+    </article>
+
+
+    <article class="content_inset__1">
+      <div id="services" class="hashAncor"></div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading  wow fadeInUp">
+                What we do
+              </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta.
+              </p>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img" src="images/page1_img21.png" alt="">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Consectetuer<br>
+                <span class="text-3 text__light color-2">Step 1</span>
+              </h3>
+              <p class="block-item-6_description text-5">Lorem ipsum dolot amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.</p>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img" src="images/page1_img22.png" alt="">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Adipiscing<br>
+                <span class="text-3 text__light color-2">Step 2</span>
+              </h3>
+              <p class="block-item-6_description text-5">Lorem ipsum dolot amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.</p>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img" src="images/page1_img23.png" alt="">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Praesent<br>
+                <span class="text-3 text__light color-2">Step 3</span>
+              </h3>
+              <p class="block-item-6_description text-5">Lorem ipsum dolot amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.</p>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img" src="images/page1_img24.png" alt="">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Vestibulum<br>
+                <span class="text-3 text__light color-2">Step 4</span>
+              </h3>
+              <p class="block-item-6_description text-5">Lorem ipsum dolot amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="block-stellar content_bg__4" data-stellar-background-ratio="-0.01">
+      <div id="staff" class="hashAncor"></div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading wow fadeInUp">
+                The staff
+              </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown">
+                Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharet
+              </p>
+            </div>
+          </div>
+          <div class="grid_4">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img block-item-6_img__indent-2" src="images/page1_img26.jpg" alt="">
+              <h3 class="block-item-6_heading text__regular">
+                Robert Smith<br>
+                <span class="text-3 text__light color-3 text__lower-spacing">Quisque nulla</span>
+              </h3>
+              <div class="block-item-6_extension">
+                <a href="#" class="fa fa-google-plus"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+          <div class="grid_4">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img block-item-6_img__indent-2" src="images/page1_img27.jpg" alt="">
+              <h3 class="block-item-6_heading text__regular">
+                Andy Taylor<br>
+                <span class="text-3 text__light color-3 text__lower-spacing">Quisque nulla</span>
+              </h3>
+              <div class="block-item-6_extension">
+                <a href="#" class="fa fa-google-plus">  </a>
+                <a href="#" class="fa fa-twitter">  </a>
+                <a href="#" class="fa fa-facebook">  </a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+          <div class="grid_4">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img block-item-6_img__indent-2" src="images/page1_img28.jpg" alt="">
+              <h3 class="block-item-6_heading text__regular">
+                Helen Frost<br>
+                <span class="text-3 text__light color-3 text__lower-spacing">Quisque nulla</span>
+              </h3>
+              <div class="block-item-6_extension">
+                <a href="#" class="fa fa-google-plus">  </a>
+                <a href="#" class="fa fa-twitter">  </a>
+                <a href="#" class="fa fa-facebook">  </a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="content_inset__1">
+      <div id="clients" class="hashAncor"></div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2 block-item-2__indent-1">
+              <h2 class="block-item-2_heading wow fadeInUp">
+                Our clients
+              </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown">
+                Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris
+              </p>
+            </div>
+          </div>
+          <div class="preffix_1 grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img29.jpg" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img30.jpg" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img31.jpg" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img32.jpg" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img33.jpg" alt="">
+            </a>
+          </div>
+          <div class="clearfix"></div>
+          <div class="preffix_2 grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img34.jpg" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img35.jpg" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img36.jpg" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/page1_img37.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="content_inset__3 content_bg__5">
+      <div id="contact-us" class="hashAncor"></div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2  block-item-2__indent-2 color-1">
+              <h2 class="block-item-2_heading wow fadeInUp">
+                Contact us
+              </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown">
+                Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris
+              </p>
+            </div>
+          </div>
+          <div class="grid_12">
+            <div class="block-2 wow fadeInDown">
+              <div class="block-2_wrapper">
+                <a href="#" class="fa fa-google-plus"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+          <div class="grid_12">
+            <form id="contact-form">
+              <div class="contact-form-loader"></div>
+              <fieldset>
+                <label class="name wow fadeInLeft">
+                  <input type="text" name="name" placeholder="First Name" value="" data-constraints="@Required @JustLetters">
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid name.</span>
+                </label>
+                <label class="name wow fadeInRight">
+                  <input type="text" name="lastname" placeholder="Last Name" value="" data-constraints="@Required @JustLetters">
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid name.</span>
+                </label>
+                <label class="message wow fadeInDown">
+                  <textarea name="message" placeholder="Message" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*The message is too short.</span>
+                </label>
+                <div class="clearfix"></div>
+                <div class="ta__c">
+                  <a href="#" class="btn-2 wow fadeInDown" data-type="submit">Send your message</a>
+                </div>
+              </fieldset>
+              <div class="modal fade response-message">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                      You message has been sent! We will be in touch soon.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </section>  
+
+  <!--========================================================
+                            FOOTER 
+  =========================================================-->
+  <footer id="footer">
+    <div class="footer_copyright text-3">Richard Biz  © <span id="copyright-year"></span> <a href="privacy.html">Privacy Policy. Terms of use</a></div>
+
+  <section class="content_map">
+    <div class="google-map-api"> 
+      <div id="map-canvas" class="gmap"></div> 
+    </div>
+  </section>
+    More <a rel="nofollow" href="http://www.templatemonster.com/category/consulting-website-templates/" target="_blank">Consulting Website Templates at TemplateMonster.com</a>
+  </footer>
+
+  <script type="text/javascript"> 
+  google_api_map_init(); 
+  function google_api_map_init(){ 
+    var map; 
+    var coordData = new google.maps.LatLng(parseFloat(40.646197), parseFloat(-73.9724068,14)); 
+    var marker; 
+  
+    var styleArray = [
+    {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#d3d3d3"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "stylers": [
+            {
+                "color": "#808080"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#b3b3b3"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ffffff"
+            },
+            {
+                "weight": 1.8
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#d7d7d7"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ebebeb"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#a7a7a7"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#efefef"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#696969"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#737373"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#d6d6d6"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {},
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#dadada"
+            }
+        ]
+    }
+]
+               
+    var markerIcon = { 
+        url: "images/gmap_marker.png", 
+        size: new google.maps.Size(42, 65), 
+        origin: new google.maps.Point(0,0), 
+        anchor: new google.maps.Point(21, 70)
+    }; 
+     
+    
+    function initialize() { 
+      var mapOptions = { 
+        zoom: 14, 
+        center: coordData, 
+        scrollwheel: false, 
+        styles: styleArray 
+      } 
+    
+      var contentString = "<div></div>"; 
+      var infowindow = new google.maps.InfoWindow({ 
+        content: contentString, 
+        maxWidth: 200 
+      }); 
+       
+      var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions); 
+      marker = new google.maps.Marker({ 
+        map:map, 
+        draggable:true, 
+        position: coordData, 
+        icon: markerIcon
+      }); 
+       
+       
+    } 
+    google.maps.event.addDomListener(window, "load", initialize); 
+  }            
+  </script>
+
+  <script src="js/script.js"></script>
+
+  <script src="js/jquery.isotope.js"></script>
+  <script src="js/isotop_ini.js"></script>
+
+</body>
+</html>

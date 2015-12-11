@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>COPASeguridad.com</title>
+  <!-- <meta charset="utf-8"> -->
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <meta name = "format-detection" content = "telephone=no" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/camera.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/touchTouch.css">  
+  <link rel="stylesheet" href="css/animation.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.2.1.js"></script>
+
+  <script src="js/camera.min.js"></script>
+  <script>
+    jQuery(function(){      
+      jQuery('.camera_wrap').camera({
+        loader: false,
+        minHeight: '500',
+        height: '41.98%',
+        thumbnails: false,
+        caption: false,
+        pagination: true,
+        navigation: false,
+        playPause: false,
+        fx: 'topLeftBottomRight'
+      });
+    });
+  </script>
+
+  <script src="search/search.js"></script>
+  <script>
+    $(document).ready(function () {
+      var state = 0;
+      document.getElementById('icon').onclick = function() {
+        if (state == 1) {
+          document.getElementById('search').style.display = 'none';
+          state = 0;
+          return;
+        }
+        document.getElementById('search').style.display = 'block';
+        state = 1;
+      };
+    });
+  </script>
+
+  <script src="js/touchTouch.jquery.js"></script> 
+  <script>
+   $(document).ready(function(){
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    $('.gallery .block-gall_item').touchTouch();
+  }); 
+  </script>
+
+  <script src="js/TMForm.js"></script>
+  <script src="js/modal.js"></script>
+
+  <script src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> 
+
+  <!--[if lt IE 8]>
+  <div id="ie6-alert" style="width: 100%; text-align:center;">
+    <img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" />
+        <area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>
+  </div>
+  <![endif]-->
+  
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+  <![endif]-->
+</head>
+  <body class="home"> <!--========================================================
+                            HEADER   =========================================================-->
+    <header id="header">
+      <section class="header_top">
+        <div id="stuck_container" style="height2: 95px;">
+		        <h1 style="height:30px;"></h1>
+        <div class="search-block" id="search-block" style2="display:none;">
+          <div class="search-block_icon fa fa-search" id="icon"></div>
+          <form id="search" style="display: none;" action="search_brazil.php" method="GET" accept-charset="utf-8">
+            <input type="text" name="s" placeholder="Enter keyword:"/>
+            <a onclick="document.getElementById('search').submit()"><div class="search_icon"></div>
+            </a>
+          </form>
+        </div>
+          <div class="navigation">
+            <nav>
+              <ul class="menu">
+                <li><a href="http://copaseguridad.com/index.aspx" target="_blank"
+ 
+                    href2="#link1">APRESENTAR UM REPORTE&nbsp;&nbsp;</a></li>
+                <li><a href="http://copaseguridad.com/birdstrikereport2.aspx" target="_blank"
+ 
+                    href2="#link1">REPORTE BATIDA COM AVES O FAUNA&nbsp;&nbsp;</a></li>
+                <li><a href="http://copaseguridad.com/portal/site/index_brazil.html#facts">ALGUNS
+                    FATOS&nbsp;&nbsp;</a></li>
+                <li><a href="http://copaseguridad.com/portal/site/index_brazil.html#warriors">SAFETY
+                    WARRIORS&nbsp;&nbsp;</a></li>
+                <li><a href="http://copaseguridad.com/portal/site/index_brazil.html#askevita" href2="http://copaseguridad.com/portal/site/index_brazil.html#warriors">PERGUNTE
+                    A EVITA</a></li>
+              </ul>
+			<table class="menutable" border="0" cellpadding="0" cellspacing="0" border="0">
+			<tr><td height="10"></td></tr>
+			<tr><td rowspan="3" width="30">
+			<img src="images/evita.png" height="45" style2="padding-left:5px;padding-top:15px;padding-right:50px;" />
+			</td>
+			<td width="20" style="padding-bottom:3px;"><a href="index_panama.html"><img src="images/panama-flag.jpg" width="20" border="0" /></a></td>
+			</tr><tr>
+			<td><a href="index.html"><img src="images/usa.png" width="20" border="0" /></a></td>
+			</tr><tr>
+			<td><a href="index_brazil.html"><img src="images/brazil.png" width="20" border="0" /></a></td>
+			</tr>
+			</table>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </header>
+    <article>
+      <div class="container" id="facts">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading wow fadeInUp"> Alguns Fatos </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown"
+ 
+                style="font-size: 25px;"> N&uacute;meros Operacionais Interessantes </p>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown"><img class="block-item-4_img"
+ 
+                alt="" src="images/page1_img7.png">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description"><span class="text-4">216</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Reportes
+                    recebidas no &uacute;ltimo m&ecirc;s</span> </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown"><img class="block-item-4_img"
+ 
+                alt="" src="images/page1_img8.png">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description"><span class="text-4">27</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Pontos
+                    falhos encontrados na auditoria no &uacute;ltimo m&ecirc;s</span> </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown"><img class="block-item-4_img"
+ 
+                alt="" src="images/page1_img9.png">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description"><span class="text-4">34</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Amea&cacute;as
+                    mitigadas no &uacute;ltimo mes</span> </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown"><img class="block-item-4_img"
+ 
+                alt="" src="images/page1_img10.png">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description"><span class="text-4">12</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Pessoas
+                    treinado en SMS</span> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="content_inset__2">
+      <section class="content_bg__3" id="warriors">
+        <div class="container" style="padding-top: 30px; padding-bottom: 20px;">
+          <div class="row">
+            <div class="grid_12">
+              <div class="block-item-5">
+                <h2 class="block-item-5_heading"> Safety Warriors </h2>
+                <p class="block-item-2_description text-3 text__light wow fadeInDown"
+ 
+                  style="font-size: 23px;"> CLIQUE NA IMAGEM PARA DESCOBRIR
+                  SAFETY WARRIOR EN ACCION </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div  class="el gallery block-gall" id="container">
+        <div class="element first">            
+           <a href="images/SW 1 - Portuguese.gif" class="block-gall_item">
+             <img src="images/SW 1.gif" alt="">
+           </a>
+        </div>
+        <div class="element second">            
+           <a href="images/SW 2 - Portuguese.gif" class="block-gall_item">
+             <img src="images/SW 2.gif" alt="">
+           </a>
+        </div>
+        <div class="element third">            
+           <a href="images/SW 3 - Portuguese.gif" class="block-gall_item">
+             <img src="images/SW 3.gif" alt="">
+           </a>
+        </div>
+        <div class="element fourth">            
+           <a href="images/SW 4 - Portuguese.gif" class="block-gall_item">
+             <img src="images/SW 4.gif" alt="">
+           </a>
+        </div>
+        <div class="element fifth">            
+           <a href="images/SW 5 - Portuguese.gif" class="block-gall_item">
+             <img src="images/SW 5.gif" alt="">
+           </a>
+        </div>
+      </div>
+    </article>
+    <article class="content_inset__1">
+      <div class="container" >
+        <div class="row" style="border: 0px solid black; border-image: none;">
+          <div class="grid_12">
+            <div class="block-item-2">
+				<a name="askevita"></a>
+              <h2 class="block-item-2_heading  wow fadeInUp"> INFORMA&Ccedil;&Atilde;O DE
+                SEGURAN&Ccedil;A </h2>
+              <center><img class="block-item-6_img" alt="" src="images/evita_cut.png"
+ 
+                  border="0" height="250"> </center>
+            </div>
+          </div>
+          <div class="grid_3" style2="width:220px;border: 0px solid black;padding-right:0px;">
+            <div class="block-item-6 wow fadeInDown">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                COMENTAR</h3>
+              <div class="text-3 text__lower-spacing" style="text-align: left; padding-left: 50px; font-size: 120%; font-weight: bold;">
+                <ul style="list-style:disc;">
+                  <li><a href="http://copaseguridad.com/index.aspx" target="_blank"
+ 
+                      href2="#link1">Informe um evento ou amea&ccedil;a</a></li>
+                  <ul>
+                    <li><a href="http://copaseguridad.com/birdstrikereport2.aspx"
+ 
+                        target="_blank" href2="#link1">Informe eventos com aves
+                        ou&nbsp;fauna</a></li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+         <!-- <div class="grid_3" style2="width:220px;margin-left:5px;">
+            <div class="block-item-6 wow fadeInDown">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                CONSULTAS</h3>
+              <div class="text-3 text__lower-spacing" style="text-align: left; padding-left: 50px; font-weight: bold;">
+                <ul style="list-style:disc;">
+                  <li><a href="http://www.copaseguridad.com/portal/site/docs/Org Chart for copaseguridad.pdf"
+ 
+                      target="_blank">Quem somos?</a></li>
+                  <li><a href="mailto:seguridad@copaair.com?subject=copaseguridad.com">Envie
+                      uma mensagem</a></li>
+                </ul>
+             </div>
+            </div>
+          </div> -->
+          <div class="grid_3" style2="width:220px;border: 0px solid black;margin-left:5px;">
+            <div class="block-item-6 wow fadeInDown">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                APRENDA</h3>
+              <div class="text-3 text__lower-spacing" style="text-align: left; padding-left: 50px; font-weight: bold;">
+                <ul style="list-style:disc;">
+                  <li>Treinamento SMS</li>
+                  <li><a href="http://www.copaseguridad.com/portal/site/docs/BE SAFE Portuguese.pdf"
+ 
+                      target="_blank">BeSafe: que fazer em caso de emerg&eacute;ncia fora de sua casa</a></li>
+                  <li><a href="http://www.copaseguridad.com/portal/site/images/poster.jpg"
+ 
+                      target="_blank">Campanha dos aeroportos para evitar golpes
+                    em aeronaves</a></li>
+                  <li><a href="http://www.copaseguridad.com/portal/site/docs/LEARN_Safety Matters 1.pdf"
+ 
+                      target="_blank">Safety Matters</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3" style2="width:220px;margin-left:5px;">
+            <div class="block-item-6 wow fadeInDown">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                INICIAR SESS&Atilde;O</h3>
+              <div class="text-3 text__lower-spacing" style="text-align: left; padding-left: 50px; font-weight: bold;">
+                <ul style="list-style:disc;">
+                  <li><a href="http://copaseguridad.com/" target="_blank">Action
+                      Log</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  <div class="contact_us_text">
+		Para preguntas o información adicional, por favor contáctenos a seguridad@copaair.com
+</div>
+    </article>
+    <!--========================================================
+                            FOOTER   =========================================================-->
+  <footer id="footer">
+    <div class="footer_copyright text-3" style="font-size:10px;">&copy;2015 MA Software Systems.  All Rights Reserved.</div>
+
+  </footer>
+
+
+  <script src="js/script.js"></script>
+
+  <script src="js/jquery.isotope.js"></script>
+  <script src="js/isotop_ini.js"></script>
+
+
+
+
+</body>
+</html>

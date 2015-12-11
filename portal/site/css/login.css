@@ -1,0 +1,131 @@
+.home {
+	display: none;
+}
+
+.content {
+	margin-bottom: 70px;
+}
+
+.input-box {
+	margin: 20px 40px;
+}
+
+.input-box input {
+	font-size: 16px;
+	height: 35px;
+	width: 60%;
+}
+
+.register .input-box input {
+	width: 95%;
+}
+
+.input-box .label {
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 10px;
+	text-align: right;
+	width: 135px;
+}
+
+.note-text{
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 10px;
+	text-align: right;
+	width: 352px;
+	
+}
+
+
+.login-box li {
+	border-bottom: 1px dotted gray;
+	font-size: 22px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	text-align: left;
+	width: 530px;
+}
+
+.input-button {
+	background: #0061a5;
+	color: white;
+	cursor: pointer;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100px;
+}
+
+.input-button:hover {
+	background: #de3f18;
+	color: black;
+}
+
+.login-message {
+	font-size: 16px;
+}
+
+.login-message a {
+	border-bottom: 1px dotted;
+}
+
+.validate {
+	color: red;
+	display: none;
+	font-size: 14px;
+	margin-left: 120px;
+}
+
+.register .validate {
+	margin-left: 0;
+}
+
+.spin,
+.success,
+.registered {
+	display: none;
+}
+
+.login-box li.spin {
+	text-align: center;
+}
+
+.inline-edit {
+	display: inline-block;
+	margin-right: 150px;
+	min-width: 160px;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+	.inline-edit {
+		margin-right: 5px;
+	}
+
+	.login-box li {
+		font-size: 18px;
+		width: 270px;
+	}
+
+	.input-box input {
+		height: 30px;
+		max-width: 50%;
+	}
+
+	.input-box .label,
+	.input-box {
+		font-size: 18px;
+	}
+
+	.input-box {
+		margin: 20px 0px;
+	}
+
+	.register .input-box input {
+		max-width: 95%;
+	}
+}

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name = "format-detection" content = "telephone=no" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/camera.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/touchTouch.css">  
+  <link rel="stylesheet" href="css/animation.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.2.1.js"></script>
+
+  <script src="js/camera.min.js"></script>
+  <script>
+    jQuery(function(){      
+      jQuery('.camera_wrap').camera({
+        loader: false,
+        minHeight: '500',
+        height: '41.98%',
+        thumbnails: false,
+        caption: false,
+        pagination: true,
+        navigation: false,
+        playPause: false,
+        fx: 'topLeftBottomRight'
+      });
+    });
+  </script>
+
+  <script src="search/search.js"></script>
+  <script>
+    $(document).ready(function () {
+      var state = 0;
+      document.getElementById('icon').onclick = function() {
+        if (state == 1) {
+          document.getElementById('search').style.display = 'none';
+          state = 0;
+          return;
+        }
+        document.getElementById('search').style.display = 'block';
+        state = 1;
+      };
+    });
+  </script>
+
+  <script src="js/touchTouch.jquery.js"></script> 
+  <script>
+   $(document).ready(function(){
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    $('.gallery .block-gall_item').touchTouch();
+  }); 
+  </script>
+
+  <script src="js/TMForm.js"></script>
+  <script src="js/modal.js"></script>
+
+  <script src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> 
+
+  <!--[if lt IE 8]>
+  <div id="ie6-alert" style="width: 100%; text-align:center;">
+    <img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" />
+        <area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>
+  </div>
+  <![endif]-->
+  
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+  <![endif]-->
+</head>
+
+<body class="home">
+  <div class="content-load-spinner"></div>
+
+  <!--========================================================
+                            HEADER 
+  =========================================================-->
+  <header id="header">
+
+    <section class="header_top">
+
+      <div id="stuck_container" style="height2:95px;">
+
+        <h1 style="height:30px;"></h1>
+
+        <div class="search-block" id="search-block" style2="display:none;">
+          <div class="search-block_icon fa fa-search" id="icon"></div>
+          <form id="search" style="display: none;" action="search.php" method="GET" accept-charset="utf-8">
+            <input type="text" name="s" placeholder="Enter keyword:"/>
+            <a onclick="document.getElementById('search').submit()"><div class="search_icon"></div>
+            </a>
+          </form>
+        </div>
+
+        <div class="navigation" >
+          <nav>
+            <ul class="menu">
+              <li><a href2="#link1" href="http://copaseguridad.com/index.aspx" target="_blank">ENVIA UN REPORTE&nbsp;&nbsp;|</a></li>
+			  <li><a href2="#link1" href="http://copaseguridad.com/birdstrikereport.aspx" target="_blank">REPORTE DE IMPACTO CON PAJAROS&nbsp;&nbsp;|</a></li>
+              <li><a href="http://copaseguridad.com/portal/site/index_panama.html#warriors">SAFETY WARRIORS&nbsp;&nbsp;|</a></li>
+              <li><a href="http://copaseguridad.com/portal/site/index_panama.html#coollinks">MURAL DE SEGURIDAD&nbsp;&nbsp;|</a></li>
+              <li><a href="http://copaseguridad.com/portal/site/index_panama.html#askevita">PREGUNTA A EVITA</a></li>
+            </ul>
+			<table class="menutable" border="0" cellpadding="0" cellspacing="0" border="0">
+			<tr><td height="10"></td></tr>
+			<tr><td rowspan="3" width="30">
+			<img src="images/evita.png" height="45" style2="padding-left:5px;padding-top:15px;padding-right:50px;" />
+			</td>
+			<td width="20"><a href="index_panama.html"><img src="images/spain.png" width="20" border="0" /></a></td>
+			</tr><tr>
+			<td><a href="index.html"><img src="images/usa.png" width="20" border="0" /></a></td>
+			</tr><tr>
+			<td><a href="index_brazil.html"><img src="images/brazil.png" width="20" border="0" /></a></td>
+			</tr>
+			</table>
+          </nav>
+        </div>
+	  </div>
+
+
+    </section>
+
+	
+	
+   
+
+    <section class="camera_wrap">
+      <div data-src="images/Slide1.png" data-time="1500" data-trasperiod="4000">
+        <div class="slider">
+          <article class="slider_item fadeIn camera_effected">
+
+            <div class="container">
+              <div class="row">
+                <div class="grid_12">
+
+                  <div class="block-item-1">
+                    <h2 class="block-item-1_heading" style="margin-top:200px;">
+                      <span class="text-1" style="-webkit-text-stroke: 1px silver;color: white;text-shadow:3px 3px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;">SMS</span><br>
+                      <span class="text__regular" style="-webkit-text-stroke: 1px silver;color: white;text-shadow:3px 3px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;">Safety Management System</span>
+                    </h2>
+                    <p class="block-item-1_description text-2">
+                      <!-- We are the trusted advisor to the world's leading businesses -->
+                    </p>
+					<!--
+                    <div class="block-item-1_extension">
+                      <a class="btn" href="#">Learn more</a>
+                    </div>
+					-->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+      <div data-src="images/Slide2.png" data-time="1500" data-trasperiod="4000"> 
+        <div class="slider">
+          <article class="slider_item fadeIn camera_effected">
+
+            <div class="container">
+              <div class="row">
+                <div class="grid_12">
+
+                  <div class="block-item-1">
+                    <h2 class="block-item-1_heading" style="margin-top:200px;">
+                      <span class="text-1" style="-webkit-text-stroke: 1px silver;color: white;text-shadow:3px 3px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;">SMS</span><br>
+                      <span class="text__regular" style="-webkit-text-stroke: 1px silver;color: white;text-shadow:3px 3px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;">Safety Management System</span>
+                    </h2>
+                    <p class="block-item-1_description text-2">
+                      <!-- We are the trusted advisor to the world's leading businesses -->
+                    </p>
+					<!--
+                    <div class="block-item-1_extension">
+                      <a class="btn" href="#">Learn more</a>
+                    </div>
+					-->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="clearfix"></div>
+  </header>
+
+    <article >
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading wow fadeInUp">
+                Algunos hechos y datos 
+              </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown" style="font-size:25px;">
+                Interesantes N&uacute;meros Operacionales 
+              </p>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown">
+              <img class="block-item-4_img" src="images/page1_img7.png" alt="">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description">
+                  <span class="text-4">216</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Reportes recibidos en el ultimo mes</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown">
+              <img class="block-item-4_img" src="images/page1_img8.png" alt="">
+              <div class="block-item-4_content">                
+                <p class="block-item-4_description">
+                  <span class="text-4">27</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Hallazgos descubiertos en las auditorias del mes pasado</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown">
+              <img class="block-item-4_img" src="images/page1_img9.png" alt="">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description">
+                  <span class="text-4">34</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Amenazas mitigadas en el ultimo mes</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid_3">
+            <div class="block-item-4 wow fadeInDown">
+              <img class="block-item-4_img" src="images/page1_img10.png" alt="">
+              <div class="block-item-4_content">
+                <p class="block-item-4_description">
+                  <span class="text-4">12</span><br>
+                  <span class="text-3 text__upercase text__lower-spacing">Personas entrenadas en SMS</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="content_inset__2">
+      <div id="link2" class="hashAncor"></div>
+
+      <section id="warriors" class="content_bg__3">
+        <div class="container" style="padding-top:30px;padding-bottom:20px;">
+          <div class="row">
+            <div class="grid_12">
+              <div class="block-item-5">
+                <h2 class="block-item-5_heading">
+                  Safety Warriors <i class="fa fa-question-circle" style="font-size:20px;" title="A Safety Warrior is a person who lives and defends operational safety"></i>
+                </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown" style="font-size:25px;">
+                Forma una l&iacute;nea // Mant&eacute;n la l&iacute;nea // Camina la l&iacute;nea
+              </p>
+              </div>
+            </div>    
+          </div>
+        </div>
+      </section>
+      <div class="el gallery block-gall" id="container">
+        <div class="element third">            
+           <a href="images/slidea2.png" class="block-gall_item">
+             <img src="images/slidea1.png" alt="">
+           </a>
+        </div>
+        <div class="element second">
+           <a href="images/slideb2.png" class="block-gall_item">
+             <img src="images/slideb1.png" alt="">
+           </a>
+        </div>
+        <div class="element first fourth fifth">
+           <a href="images/slidec2.png" class="block-gall_item">
+             <img src="images/slidec1.png" alt="">
+           </a>
+        </div>
+        <div class="element first">
+           <a href="images/slided2.png" class="block-gall_item">
+             <img src="images/slided1.png" alt="">
+           </a>
+        </div>
+        <div class="element first">
+           <a href="images/slidee2.png" class="block-gall_item">
+             <img src="images/slidee1.png" alt="">
+           </a>
+        </div>
+      </div>
+    <div>&nbsp;</div>
+    </article>
+
+
+    <article class="content_inset__1">
+      <div  class="hashAncor"></div>
+      <div class="container" id="askevita">
+        <div class="row" style="border: 0px solid black;">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading  wow fadeInUp">
+                Pregunta a Evita
+              </h2>
+              <p class="block-item-2_description text-3 text__light wow fadeInDown">
+                Nuestra meta es la implementacion de un Sistema de Gestion de Riesgo en la Compa&ntilde;&iacute;a.
+              </p>
+            </div>
+          </div>
+          <div class="grid_3" style="width:220px;border: 0px solid black;padding-right:0px;">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img" src="images/page1_img21.png" alt="">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Seguridad Operacional<br>
+              </h3>
+              <p class="block-item-6_description text-5">El equipo de Seguridad esta compuesto por un grupo selecto de investigadores de eventos en vuelo y en tierra.</p>
+            </div>
+          </div>
+          <div class="grid_3" style="width:220px;margin-left:5px;">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img" src="images/page1_img23.png" alt="">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Aseguramiento de Calidad<br>
+              </h3>
+              <p class="block-item-6_description text-5">Este equipo es reponsable de la vigilancia del cumplimiento de la Compa&ntilde;ia con las regulaciones y los procedimientos internos.</p>
+            </div>
+          </div>
+          <div class="grid_3" style="width:220px;border: 0px solid black;margin-left:5px;">
+            <div class="block-item-6 wow fadeInDown">
+              <img class="block-item-6_img" src="images/page1_img22.png" alt="">
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Programas de Seguridad<br>
+              </h3>
+              <p class="block-item-6_description text-5">SMS, Plan de Respuesta a Emergencias y Analisis de Seguridad y Calidad.</p>
+            </div>
+          </div>
+          <div class="grid_3" style="width:220px;margin-left:5px;">
+            <div class="block-item-6 wow fadeInDown">
+              <a href="http://www.copaseguridad.com" target="_blank"><img class="block-item-6_img" src="images/page1_img24.png" alt="" border="0"></a>
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Herramientas de Seguridad<br>
+              </h3>
+              <p class="block-item-6_description text-5">Ingresa a Action Log aqui.</p>
+            </div>
+          </div>
+
+          <div class="grid_3" style="width:220px;margin-left:5px;">
+            <div class="block-item-6 wow fadeInDown">
+              <a href="mailto:anarenas@copaair.com?subject=Contact From Website"><img class="block-item-6_img" src="images/evita_cut.png" alt="" height="135" border="0"></a>
+              <h3 class="text__black block-item-6_heading text-2 text__lower-spacing">
+                Contactanos<br>
+              </h3>
+              <p class="block-item-6_description text-5">Has Click aqui para enviar un mensaje al equipo de Seguridad Operacional y Aseguramiento de Calidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="block-stellar content_bg__4" data-stellar-background-ratio="-0.01">
+      <div id="coollinks" class="hashAncor"></div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2">
+              <h2 class="block-item-2_heading wow fadeInUp">
+                MURAL DE SEGURIDAD
+              </h2>
+            </div>
+          </div>
+		  <center>
+			<div style="font-size:25px;font-weight:bold;">
+			  <a href="BE SMART SAFE.pdf" target="_blank">Be Smart Safe: un documento dise&ntilde;ado para<br/>informarte que debes hacer en caso de una<br/>emergencia fuera de tu base.</a>
+			  </div>
+			  </center>
+			  <div style="height:270px;"></div>
+        </div>
+      </div>
+    </article>
+<!--
+    <article class="content_inset__1">
+      <div id="clients" class="hashAncor"></div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2 block-item-2__indent-1">
+              <h2 class="block-item-2_heading wow fadeInUp">
+                Our Partners
+              </h2>
+            </div>
+          </div>
+          <div class="preffix_1 grid_2">
+            <a href="http://www.masoftwaresystems.net" class="block-1 wow fadeInDown" target="_blank">
+              <img src="images/logo_mass_copa.png" alt="MA Software Systems">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/p_logo1.png" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/p_logo2.png" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/p_logo3.png" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/p_logo4.png" alt="">
+            </a>
+          </div>
+          <div class="clearfix"></div>
+          <div class="preffix_2 grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/p_logo5.png" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/p_logo6.png" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/p_logo1.png" alt="">
+            </a>
+          </div>
+          <div class="grid_2">
+            <a href="#" class="block-1 wow fadeInDown">
+              <img src="images/p_logo1.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+-->
+<!--
+    <article class="content_inset__3 content_bg__5">
+      <div id="contact-us" class="hashAncor"></div>
+      <div class="container">
+        <div class="row">
+          <div class="grid_12">
+            <div class="block-item-2  block-item-2__indent-2 color-1">
+              <h2 class="block-item-2_heading wow fadeInUp">
+                Contact us
+              </h2>
+            </div>
+          </div>
+          <div class="grid_12">
+            <div class="block-2 wow fadeInDown">
+              <div class="block-2_wrapper">
+                <a href="#" class="fa fa-google-plus"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+          <div class="grid_12">
+            <form id="contact-form">
+              <div class="contact-form-loader"></div>
+              <fieldset>
+                <label class="name wow fadeInLeft">
+                  <input type="text" name="name" placeholder="First Name" value="" data-constraints="@Required @JustLetters">
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid name.</span>
+                </label>
+                <label class="name wow fadeInRight">
+                  <input type="text" name="lastname" placeholder="Last Name" value="" data-constraints="@Required @JustLetters">
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid name.</span>
+                </label>
+                <label class="message wow fadeInDown">
+				  <input type="text" name="email" placeholder="Email Address" value="" data-constraints="@Required">
+                  <span class="empty-message">*This field is required.</span>
+                </label>
+                <label class="message wow fadeInDown">
+                  <textarea name="message" placeholder="Message" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*The message is too short.</span>
+                </label>
+                <div class="clearfix"></div>
+                <div class="ta__c">
+                  <a href="#" class="btn-2 wow fadeInDown" data-type="submit">Send your message</a>
+                </div>
+              </fieldset>
+              <div class="modal fade response-message">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                      You message has been sent! We will be in touch soon.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </article>
+-->
+  </section>  
+
+  <!--========================================================
+                            FOOTER 
+  =========================================================-->
+  <footer id="footer">
+    <div class="footer_copyright text-3">&copy;2015 MA Software Systems.  All Rights Reserved.</div>
+
+<!--
+  <section class="content_map">
+    <div class="google-map-api"> 
+      <div id="map-canvas" class="gmap"></div> 
+    </div>
+  </section>
+    More <a rel="nofollow" href="http://www.templatemonster.com/category/consulting-website-templates/" target="_blank">Consulting Website Templates at TemplateMonster.com</a>
+  </footer>
+
+  <script type="text/javascript"> 
+  google_api_map_init(); 
+  function google_api_map_init(){ 
+    var map; 
+    var coordData = new google.maps.LatLng(parseFloat(40.646197), parseFloat(-73.9724068,14)); 
+    var marker; 
+  
+    var styleArray = [
+    {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#d3d3d3"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "stylers": [
+            {
+                "color": "#808080"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#b3b3b3"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ffffff"
+            },
+            {
+                "weight": 1.8
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#d7d7d7"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ebebeb"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#a7a7a7"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#efefef"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#696969"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#737373"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#d6d6d6"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {},
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#dadada"
+            }
+        ]
+    }
+]
+               
+    var markerIcon = { 
+        url: "images/gmap_marker.png", 
+        size: new google.maps.Size(42, 65), 
+        origin: new google.maps.Point(0,0), 
+        anchor: new google.maps.Point(21, 70)
+    }; 
+     
+    
+    function initialize() { 
+      var mapOptions = { 
+        zoom: 14, 
+        center: coordData, 
+        scrollwheel: false, 
+        styles: styleArray 
+      } 
+    
+      var contentString = "<div></div>"; 
+      var infowindow = new google.maps.InfoWindow({ 
+        content: contentString, 
+        maxWidth: 200 
+      }); 
+       
+      var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions); 
+      marker = new google.maps.Marker({ 
+        map:map, 
+        draggable:true, 
+        position: coordData, 
+        icon: markerIcon
+      }); 
+       
+       
+    } 
+    google.maps.event.addDomListener(window, "load", initialize); 
+  }            
+  </script>
+  -->
+
+  <script src="js/script.js"></script>
+
+  <script src="js/jquery.isotope.js"></script>
+  <script src="js/isotop_ini.js"></script>
+
+
+
+
+</body>
+</html>

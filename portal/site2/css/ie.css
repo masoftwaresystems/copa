@@ -1,0 +1,43 @@
+.search-block_icon { behavior:url(js/PIE.htc); position:relative;}
+.block-2 .fa { behavior:url(js/PIE.htc); position:relative;}
+
+.block-stellar {
+  background-attachment: fixed;
+  background-position: center 100%;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.block-gall_item:after { display: none; } 
+.block-gall_item .block-gall_cover { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);  } 
+.block-gall_item:hover { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);  } 
+.block-gall_item:hover .block-gall_cover { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);  }
+.block-gall_item:hover:after { display: block; }
+
+
+
+/* Contact Form Processing Box
+========================================================*/
+#contact-form .contact-form-loader { 
+  display: none;
+}
+#contact-form.processing .contact-form-loader {
+  display: block;
+}
+.inner .item a .fa {
+	display: none !important	;
+}
+.inner .item a:hover .fa {
+	display: block !important;
+}
+.inner .item a .magnifier-overlay {
+	display: none !important	;
+}
+.inner .item a:hover .magnifier-overlay {
+	display: block !important;
+}
+
+#contact-form .message .empty-message, 
+#contact-form .message .error-message {
+  margin-right: 20px;
+}
