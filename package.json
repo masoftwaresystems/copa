@@ -1,0 +1,9 @@
+{
+	"version": "0.0.2",
+	"description": "Copa",
+	"name": "copa",
+	"repository": {
+	"type": "git",
+		"url": "https://github.com/masoftwaresystems/copa.git"
+	}
+} 
