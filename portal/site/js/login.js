@@ -228,6 +228,22 @@ COPA.Authenticate = {
             COPA.Authenticate.remove();
             location.href = 'login.html';
         });
+
+        jQuery('#lang-en').click(function () {
+            COPA.Authenticate.set(
+                'language',
+                'en',
+                day
+            );
+        });
+
+        jQuery('#lang-es').click(function () {
+            COPA.Authenticate.set(
+                'language',
+                'es',
+                day
+            );
+        });
     }
 };
 
