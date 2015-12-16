@@ -42,6 +42,11 @@ COPA.Authenticate = {
         return '';
     },
     remove: function () {
+        COPA.Authenticate.set(
+            'user',
+            '',
+            day
+        );
         document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     },
     register: function (auth) {
@@ -194,6 +199,8 @@ COPA.Authenticate = {
             if (location.pathname.indexOf('login.html') === -1 &&
                 location.pathname.indexOf('register.html') === -1 &&
                 location.pathname.indexOf('reset.html') === -1) {
+                // var href = location.pathname;
+                // href = (language === 'es') ? href.replace('/en/', '/es/') : href;
                 location.href = 'login.html';
             } else {
                 jQuery('.home').show();
