@@ -175,9 +175,19 @@ COPA.Authenticate = {
 	},
     init: function () {
         jQuery('.menuItem .auth').html('<a href="login.html">Login</a>');
+        var language = COPA.Authenticate.get('language');
+        if (language === '') {
+            COPA.Authenticate.set(
+                'language',
+                'en',
+                day
+            );
+            language = 'en';
+        }
         if (COPA.Authenticate.get('user') !== null && COPA.Authenticate.get('user') !== '') {
-            var user = COPA.Authenticate.get('user').split('@')[0];
-            jQuery('.menuItem .auth').html('<a href="profile.html">Welcome, ' + user + '</a>');
+            var user = COPA.Authenticate.get('user').split('@')[0],
+                welcome = (language === 'es') ? 'Bienvenidos' : 'Welcome';
+            jQuery('.menuItem .auth').html('<a href="profile.html">' + welcome +', ' + user + '</a>');
             jQuery('.username').html(COPA.Authenticate.get('user'));
             jQuery('.home').show();
         } else {
@@ -227,6 +237,30 @@ COPA.Authenticate = {
         jQuery('#logout').click(function () {
             COPA.Authenticate.remove();
             location.href = 'login.html';
+        });
+
+        jQuery('#lang-en').click(function () {
+            var href = location.pathname;
+
+            COPA.Authenticate.set(
+                'language',
+                'en',
+                day
+            );
+            href = href.replace('/es/', '/en/');
+            location.href = href;
+        });
+
+        jQuery('#lang-es').click(function () {
+            var href = location.pathname;
+
+            COPA.Authenticate.set(
+                'language',
+                'es',
+                day
+            );
+            href = href.replace('/en/', '/es/');
+            location.href = href;
         });
     }
 };

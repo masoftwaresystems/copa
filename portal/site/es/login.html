@@ -56,8 +56,16 @@
           <div class="headerNav">
             <nav>
               <ul class="navMenu">
-                <li class="menuItem"><a href="*"><img src="../images/panama-flag.jpg" border="0" width="50"height="36"></a></li>
-                <li class="menuItem"><a href="../en/login.html"><img src="../images/usflag.png" border="0" width="50" height="36"></a></li>
+                <li class="menuItem">
+                  <a href="#">
+                    <img src="../images/panama-flag.jpg" border="0" width="50"height="36">
+                  </a>
+                </li>
+                <li class="menuItem">
+                  <a id="lang-en" href="#">
+                    <img src="../images/usflag.png" border="0" width="50" height="36">
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -83,12 +91,12 @@
                   <div class="input-box">
                     <div class="validate user"></div>
                     <div class="label">Usuario: </div>
-                    <input id="user"/>
+                    <input id="user" class="login"/>
 					<div class="note-text">(Nota: Introduzca email copaair.com)</div>
                   </div>
                   <div class="input-box">
                     <div class="label">Contrase&ntilde;a: </div>
-                    <input id="token" type="password"/>
+                    <input id="token" type="password" class="login"/>
                   </div>
                   <div class="input-box">
                     <div id="login" class="input-button">submit</div>

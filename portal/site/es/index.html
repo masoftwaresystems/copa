@@ -60,7 +60,6 @@ minimum-scale=1.0; maximum-scale=1.0;user-scalable=no">
   <script src="../js/touchTouch.jquery.js"></script> 
   <script>
    $(document).ready(function(){
-    $().UItoTop({ easingType: 'easeOutQuart' });
     $('.gallery .block-gall_item').touchTouch();
   }); 
   </script>
@@ -109,8 +108,16 @@ class="home"><!--========================================================
             <nav>
               <ul class="navMenu">
                 <li class="menuItem"><div class="auth"></div></li>
-                <li class="menuItem"><a href="#"><img src="../images/panama-flag.jpg" border="0" width="50"height="36"></a></li>
-                <li class="menuItem"><a href="../en/index.html"><img src="../images/usflag.png" border="0" width="50" height="36"></a></li>
+                <li class="menuItem">
+                  <a href="#">
+                    <img src="../images/panama-flag.jpg" border="0" width="50"height="36">
+                  </a>
+                </li>
+                <li class="menuItem">
+                  <a id="lang-en" href="#">
+                    <img src="../images/usflag.png" border="0" width="50" height="36">
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
