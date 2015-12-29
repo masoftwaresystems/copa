@@ -135,22 +135,13 @@ COPA.Authenticate = {
             }
         });
     },
-<<<<<<< HEAD
-	validate: function (type) {
-     
-
+	validate: function (type, user) {     
 
 var href = location.pathname;
          
         var spanish = "/es/";
 
-        var user = jQuery('#user').val(),
-
-            domains = {
-=======
-	validate: function (type, user) {
         var domains = {
->>>>>>> master
                 copa: 'copaair.com',
                 mass: 'masoftwaresystems.com',
                 gmail: 'gmail.com'
