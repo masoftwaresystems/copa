@@ -135,6 +135,7 @@ COPA.Authenticate = {
             }
         });
     },
+<<<<<<< HEAD
 	validate: function (type) {
      
 
@@ -146,6 +147,10 @@ var href = location.pathname;
         var user = jQuery('#user').val(),
 
             domains = {
+=======
+	validate: function (type, user) {
+        var domains = {
+>>>>>>> master
                 copa: 'copaair.com',
                 mass: 'masoftwaresystems.com',
                 gmail: 'gmail.com'
@@ -216,11 +221,13 @@ var href = location.pathname;
             }
         }
         jQuery('#login').click(function () {
+            var user = jQuery('#user').val();
+
             jQuery('.spin').show();
             jQuery('.auth').hide();
-            if (COPA.Authenticate.validate('login')) {
+            if (COPA.Authenticate.validate('login', user)) {
                 COPA.Authenticate.login({
-                    username: jQuery('#user').val(),
+                    username: user,
                     password: jQuery('#token').val()
                 });
             }
@@ -228,11 +235,12 @@ var href = location.pathname;
 
         jQuery('#register').click(function () {
             var N = 10,
-                token = Array(N+1).join((Math.random().toString(36)+'00000000000000000').slice(2, 18)).slice(0, N);
+                token = Array(N+1).join((Math.random().toString(36)+'00000000000000000').slice(2, 18)).slice(0, N),
+                user = jQuery('#user').val();
 
-            if (COPA.Authenticate.validate('register')) {
+            if (COPA.Authenticate.validate('register', user)) {
                 COPA.Authenticate.register({
-                    username: jQuery('#user').val(),
+                    username: user,
                     password: token
                 });
             }
@@ -240,11 +248,12 @@ var href = location.pathname;
 
         jQuery('#reset').click(function () {
             var N = 10,
-                token = Array(N+1).join((Math.random().toString(36)+'00000000000000000').slice(2, 18)).slice(0, N);
+                token = Array(N+1).join((Math.random().toString(36)+'00000000000000000').slice(2, 18)).slice(0, N),
+                user = jQuery('#user').val() || COPA.Authenticate.get('user');
 
-            if (COPA.Authenticate.validate('reset')) {
+            if (COPA.Authenticate.validate('reset', user)) {
                 COPA.Authenticate.reset({
-                    username: jQuery('#user').val() || COPA.Authenticate.get('user'),
+                    username: user,
                     password: token
                 });
             }
