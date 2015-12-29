@@ -136,7 +136,8 @@ COPA.Authenticate = {
         });
     },
 	validate: function (type, user) {
-        var domains = {
+        var language = COPA.Authenticate.get('language') || 'en',
+            domains = {
                 copa: 'copaair.com',
                 mass: 'masoftwaresystems.com',
                 gmail: 'gmail.com'
@@ -153,8 +154,14 @@ COPA.Authenticate = {
             case 'register':
                 if (!isValid) {
                     message = '<p>The email address you entered does not appear to be a valid copaair.com email address. ' +
-                    'Re-enter your email address.</p>' +
-                    '<p>Questions? Send an email to <a href="mailto:seguridad@copaair.com">seguridad@copaair.com</a></p>';
+                        'Re-enter your email address.</p>' +
+                        '<p>Questions? Send an email to <a href="mailto:seguridad@copaair.com">seguridad@copaair.com</a></p>';
+                    
+                    if (language === 'es') {
+                        message = '<p>La dirección de correo electrónico que ha introducido no parece ser un correo electrónico valido copaair.com.' +
+                            'Por favor vuelva a introducir su dirección de correo electrónico.</p>' +
+                            '<p>¿Preguntas? Envíe un correo electrónico a <a href="mailto:seguridad@copaair.com">seguridad@copaair.com</a></p>';
+                    }
                 }
                 break;
             case 'reset':
