@@ -135,8 +135,7 @@ COPA.Authenticate = {
             }
         });
     },
-	validate: function (type, user) {     
-         
+	validate: function (type, user) {
         var language = COPA.Authenticate.get('language') || 'en',
             domains = {
                 copa: 'copaair.com',
