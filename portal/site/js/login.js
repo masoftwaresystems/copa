@@ -1,4 +1,4 @@
-/* 11/30/2015 */
+/* 12/30/2015 */
 var COPA = COPA || {},
     api = 'http://www.copaseguridad.com/authenticate/',
     day = 86400000;
@@ -135,7 +135,7 @@ COPA.Authenticate = {
             }
         });
     },
-	validate: function (type, user) {
+    validate: function (type, user) {
         var language = COPA.Authenticate.get('language') || 'en',
             domains = {
                 copa: 'copaair.com',
@@ -169,14 +169,14 @@ COPA.Authenticate = {
                 break;
         }
 
-		jQuery('.validate.user').html('').hide();
+        jQuery('.validate.user').html('').hide();
 
-		if (!isValid) {
-			jQuery('.validate.user').html(message).show();
+        if (!isValid) {
+            jQuery('.validate.user').html(message).show();
             jQuery('.auth').show();
             jQuery('.spin').hide();
             return false;
-		}
+        }
         return true;
 	},
     init: function () {
