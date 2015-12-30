@@ -1,9 +1,16 @@
 /* 12/30/2015 */
 var COPA = COPA || {},
     api = 'http://www.copaseguridad.com/authenticate/',
-    day = 86400000;
+    day = 86400000,
+    console = window.console || {};
 
 jQuery.support.cors = true;
+
+if (!console.log) {
+    console.log = functionn () {
+        return true;
+    }
+}
 
 function emailDomainCheck(email, domain) {
     var parts = email.split('@');
