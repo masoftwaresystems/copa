@@ -7,7 +7,7 @@ var COPA = COPA || {},
 jQuery.support.cors = true;
 
 if (!console.log) {
-    console.log = functionn () {
+    console.log = function () {
         return true;
     }
 }
