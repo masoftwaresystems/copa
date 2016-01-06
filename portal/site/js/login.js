@@ -52,6 +52,14 @@ COPA.Authenticate = {
         document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     },
     register: function (auth) {
+
+ var language = COPA.Authenticate.get('language') || 'en',
+            domains = {
+                copa: 'copaair.com',
+                mass: 'masoftwaresystems.com',
+                gmail: 'gmail.com'
+            };
+
 	    jQuery.support.cors = true;
         var userMessage = '';
         jQuery.ajax({
@@ -65,9 +73,19 @@ COPA.Authenticate = {
                 if (data && data.authenticate && data.register) {
                     jQuery('.auth').hide();
                     jQuery('.registered').show();
-                } else {
+                } 
+
+                else  if (language === 'es'){
                     userMessage = data.error + '<br><a href="login.html"> LOGIN</a> or <a href="reset.html"> RESET PASSWORD</a>'
                     jQuery('.validate.user').html(userMessage).show();
+                }
+
+                    else {
+                    userMessage = 'El usuario ya existe con nombre de usuario' + '<br><a href="login.html"> LOGIN</a> or <a href="reset.html"> RESET PASSWORD</a>'
+                    jQuery('.validate.user').html(userMessage).show();
+
+
+
                 }
             },
             error: function (jqXHR, status, error) {
@@ -160,10 +178,12 @@ COPA.Authenticate = {
                 }
                 break;
             case 'register':
+            if (document.documentElement.lang === 'en') {
                 message = '<p>The email address you entered does not appear to be a valid copaair.com email address. ' +
                     'Re-enter your email address.</p>' +
                     '<p>Questions? Send an email to <a href="mailto:seguridad@copaair.com">seguridad@copaair.com</a></p>';
-                if (language === 'es') {
+                }
+                else  {
                     message = '<p>La dirección de correo electrónico que ha introducido no parece ser un correo electrónico valido copaair.com.' +
                         'Por favor vuelva a introducir su dirección de correo electrónico.</p>' +
                         '<p>¿Preguntas? Envíe un correo electrónico a <a href="mailto:seguridad@copaair.com">seguridad@copaair.com</a></p>';
@@ -197,7 +217,9 @@ COPA.Authenticate = {
         }
         if (COPA.Authenticate.get('user') !== null && COPA.Authenticate.get('user') !== '') {
             var user = COPA.Authenticate.get('user').split('@')[0],
-                welcome = (language === 'es') ? 'Bienvenidos' : 'Welcome';
+                welcome = (document.documentElement.lang === 'es') ? 'Bienvenidos' : 'Welcome';
+
+                
             jQuery('.menuItem .auth').html('<a href="profile.html">' + welcome +', ' + user + '</a>');
             jQuery('.username').html(COPA.Authenticate.get('user'));
             jQuery('.home').show();
