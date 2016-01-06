@@ -52,12 +52,10 @@ COPA.Authenticate = {
         document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     },
     register: function (auth) {
-
-        var language = document.documentElement.lang || COPA.Authenticate.get('language') || 'en';
-
-	    jQuery.support.cors = true;
-        var userMessage = '';
+        var userMessage = '',
+            language = document.documentElement.lang || COPA.Authenticate.get('language') || 'en';
         
+        jQuery.support.cors = true;
         jQuery.ajax({
             url: api + 'register',
             method: 'POST',
@@ -130,6 +128,7 @@ COPA.Authenticate = {
     },
     login: function (auth) {
         var message = '* Email address or password was incorrect';
+        
         jQuery.support.cors = true;
         jQuery.ajax({
             url: api + 'login',
