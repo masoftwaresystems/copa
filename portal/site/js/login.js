@@ -207,7 +207,10 @@ COPA.Authenticate = {
 	},
     init: function () {
         jQuery('.menuItem .auth').html('<a href="login.html">Login</a>');
-        var language = document.documentElement.lang || COPA.Authenticate.get('language');
+        var language = document.documentElement.lang || COPA.Authenticate.get('language'),
+            user,
+            welcome;
+        
         if (language === '') {
             COPA.Authenticate.set(
                 'language',
@@ -216,10 +219,10 @@ COPA.Authenticate = {
             );
             language = 'en';
         }
+        
         if (COPA.Authenticate.get('user') !== null && COPA.Authenticate.get('user') !== '') {
-            var user = COPA.Authenticate.get('user').split('@')[0],
-                welcome = (language === 'es') ? 'Bienvenidos' : 'Welcome';
-
+            user = COPA.Authenticate.get('user').split('@')[0];
+            welcome = (language === 'es') ? 'Bienvenidos' : 'Welcome';
                 
             jQuery('.menuItem .auth').html('<a href="profile.html">' + welcome +', ' + user + '</a>');
             jQuery('.username').html(COPA.Authenticate.get('user'));
@@ -233,6 +236,7 @@ COPA.Authenticate = {
                 jQuery('.home').show();
             }
         }
+        
         jQuery('#login').click(function () {
             var user = jQuery('#user').val();
 
