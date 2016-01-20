@@ -222,7 +222,7 @@ COPA.Authenticate = {
         
         if (COPA.Authenticate.get('user') !== null && COPA.Authenticate.get('user') !== '') {
             user = COPA.Authenticate.get('user').split('@')[0];
-            welcome = (language === 'es') ? 'Bienvenidos' : 'Welcome';
+            welcome = (language === 'es') ? 'Bienvenido' : 'Welcome';
                 
             jQuery('.menuItem .auth').html('<a href="profile.html">' + welcome +', ' + user + '</a>');
             jQuery('.username').html(COPA.Authenticate.get('user'));
