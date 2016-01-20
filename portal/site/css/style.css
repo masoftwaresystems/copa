@@ -1001,6 +1001,9 @@ nav {
     width: auto;
     margin: 10px;
   }
+  .grid_3_promo {
+    width: 100%;
+  }
 }
 /* Contact Form Close icon 
 ========================================================*/
