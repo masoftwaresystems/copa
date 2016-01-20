@@ -86,13 +86,14 @@ COPA.Authenticate = {
                 // console.log(error);
                 switch (language) {
                     case 'es':
-                        userMessage = error + '<br><a href="login.html"> LOGIN</a> or <a href="reset.html"> RESET PASSWORD</a>'
+                        userMessage = 'El usuario ya existe con nombre de usuario' + '<br><a href="login.html">LOGIN</a> or <a href="reset.html">RESET PASSWORD</a>'
                         jQuery('.validate.user').html(userMessage).show();
                         break;
                     default:
-                        userMessage = 'El usuario ya existe con nombre de usuario' + '<br><a href="login.html"> LOGIN</a> or <a href="reset.html"> RESET PASSWORD</a>'
+                        userMessage = error + '<br><a href="login.html">INICIAR SESI&Oacute;N</a> o <a href="reset.html">RESTABLECER CONTRASE&Ntilde;A</a>'
                         jQuery('.validate.user').html(userMessage).show();
                         break;
+                        
                 }
             }
         });
