@@ -51,6 +51,23 @@ $(window).load(function() {
     })
   }
 
+ function redirect(){
+        var userMessage = '',
+            language = document.documentElement.lang || COPA.Authenticate.get('language') || 'en';
+                    switch (language) {
+                        case 'es':
+                            userMessage = 'El usuario ya existe con nombre de usuario' + '<br><a href="login.html">INICIAR SESI&Oacute;N</a> o <a href="reset.html">RESTABLECER CONTRASE&Ntilde;A</a>'
+                            jQuery('.validate.user').html(userMessage).show();
+                            break;
+                        default:
+                            userMessage = data.error + '<br><a href="login.html"> LOGIN</a> or <a href="reset.html"> RESET PASSWORD</a>'
+                            jQuery('.validate.user').html(userMessage).show();
+                            break;
+                            
+                    }
+                }
+            },
+
   function offsetListener(scrollTopValue, anim){
     if(isHomePage){
 

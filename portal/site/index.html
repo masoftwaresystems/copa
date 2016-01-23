@@ -1,6 +1,5 @@
 <html lang="en">
   <head>
-  <meta http-equiv="refresh" content="0; URL='http://www.copaseguridad.com/portal/site/es/index.html'" />
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <meta content="IE=11.0000" http-equiv="X-UA-Compatible">
     <title>COPASeguridad.com</title>
@@ -17,6 +16,20 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script>
+                    var language = document.documentElement.lang || COPA.Authenticate.get('language') || 'en';
+                    switch (language) {
+                        case 'es':
+                           window.location="http://www.copaseguridad.com/portal/site/en/index.html";
+                            break;
+                        default:
+                            window.location="http://www.copaseguridad.com/portal/site/es/index.html";
+                            break;
+                            
+                    };
+                           
+            </script>
+
   <script src="js/jquery.js"></script>
   <script src="js/jquery-migrate-1.2.1.js"></script>
 
