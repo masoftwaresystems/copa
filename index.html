@@ -3,6 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <title>Domain Default page</title>
+<script>
+  var language = document.documentElement.lang || 'en';
+  switch (language) {
+      case 'es':
+        window.location="http://www.copaseguridad.com/portal/site/en/index.html";
+        break;
+      default:
+        window.location="http://www.copaseguridad.com/portal/site/es/index.html";
+        break;
+          
+  };
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Cache-Control" content="no-cache" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -12,19 +24,6 @@
 <script type="text/javascript">writeCopyFlag();</script>
 </head>
 <body>
-<script>
-                    var language = document.documentElement.lang || COPA.Authenticate.get('language') || 'en';
-                    switch (language) {
-                        case 'es':
-                           window.location="http://www.copaseguridad.com/portal/site/en/index.html";
-                            break;
-                        default:
-                            window.location="http://www.copaseguridad.com/portal/site/es/index.html";
-                            break;
-                            
-                    };
-                           
-            </script>
 <div class="page">
   <div class="header clear">
     <script type="text/javascript">
