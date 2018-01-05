@@ -35,11 +35,10 @@ $(window).load(function() {
   , isAnim = false
   , isHomePage = $('body').hasClass('home')? true:false
   ;
-  
+
   //--------------------------- Menu navigation ---------------------------
 
-  getPageOffset();
-  function getPageOffset(){
+  (function getPageOffset(){
     offsetArray = [];
     offsetValueArray = [];
     $('.hashAncor').each(function(){
@@ -49,24 +48,7 @@ $(window).load(function() {
       offsetArray.push(_item);
       offsetValueArray.push(_item.offsetVal);
     })
-  }
-
- function redirect(){
-        var userMessage = '',
-            language = document.documentElement.lang || COPA.Authenticate.get('language') || 'en';
-                    switch (language) {
-                        case 'es':
-                            userMessage = 'El usuario ya existe con nombre de usuario' + '<br><a href="login.html">INICIAR SESI&Oacute;N</a> o <a href="reset.html">RESTABLECER CONTRASE&Ntilde;A</a>'
-                            jQuery('.validate.user').html(userMessage).show();
-                            break;
-                        default:
-                            userMessage = data.error + '<br><a href="login.html"> LOGIN</a> or <a href="reset.html"> RESET PASSWORD</a>'
-                            jQuery('.validate.user').html(userMessage).show();
-                            break;
-                            
-                    }
-                }
-            },
+  })();
 
   function offsetListener(scrollTopValue, anim){
     if(isHomePage){
@@ -133,7 +115,7 @@ $(window).load(function() {
 
   $('> li a[href^="#"]', menuSelector).on('click',function (e) {
     e.preventDefault();
-    
+
     var target = this.hash,
     $target = $(target);
     offsetListener($target.offset().top, true);
@@ -147,7 +129,7 @@ $(window).load(function() {
     offsetListener($target.offset().top, true);
     return false;
   });
-  
+
 
   $(window).on('hashchange', function() {
     var
@@ -163,22 +145,22 @@ $(window).load(function() {
 /* Stellar.js
 ========================================================*/
 include('js/stellar/jquery.stellar.js');
-$(document).ready(function() { 
+$(document).ready(function() {
   if ($('html').hasClass('desktop')) {
       $.stellar({
         horizontalScrolling: false,
         verticalOffset: -50
       });
-  }  
+  }
 });
 
 /* Stick up menu
 ========================================================*/
 include('js/tmstickup.js');
-$(window).load(function() { 
+$(window).load(function() {
   if ($('html').hasClass('desktop')) {
       /* $('#stuck_container').tmStickUp({}) */
-  }  
+  }
 });
 
 /* TOOGLE
@@ -197,17 +179,17 @@ $(window).load(function(){
 /*
 Disabling due to UX issues
 include('js/wow/wow.min.js');
-$(window).load(function () {       
+$(window).load(function () {
   if ($('html').hasClass('desktop')) {
     new WOW().init();
-  }   
+  }
 });
 */
 
 /* ToTop
 ========================================================*/
 /*include('js/jquery.ui.totop.js');
-$(function () {   
+$(function () {
   $().UItoTop({ easingType: 'easeOutQuart' });
 });*/
 
@@ -240,7 +222,7 @@ $(function(){
 			document.addEventListener("gesturestart", gestureStart, false);
 		}
 	};
-	
+
 	scaleFix();
 	// Menu Android
 	if(window.orientation!=undefined){
@@ -257,7 +239,7 @@ $(function(){
        window.location.href = $(this).attr("href");
       }
      );
-    } 
+    }
    })
   }
  }
