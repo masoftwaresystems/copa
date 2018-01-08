@@ -107,6 +107,7 @@ COPA.Authenticate = {
             method: 'POST',
             data: JSON.stringify(auth),
             dataType: 'json',
+            contentType: 'application/json',
             processData: false,
             success: function (data) {
                 // console.log(data);
@@ -138,6 +139,7 @@ COPA.Authenticate = {
             method: 'POST',
             data: JSON.stringify(auth),
             dataType: 'json',
+            contentType: 'application/json',
             processData: false,
             success: function (data) {
                 jQuery('.spin').hide();
